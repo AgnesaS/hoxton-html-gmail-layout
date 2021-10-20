@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template: 'header      header     header      header'      70px
+                   'right-menu  main-menu  left-menu1  left-menu2'  1fr/
+                    150px         2fr         1fr         50px ;
+    width: 100vw;
+    height: 100vh;
+    margin: 5px;
+    
+
+
+}
+.header{
+    display: inline-block;
+    grid-area: header;
+    border: solid 1px gray;
+
+}
+.img{margin :30px;
+    margin-top: 20px;
+ 
+}
+.header h1{
+    display: inline-block;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 100;   
+}
+
+
+.right-menu{
+    grid-area: right-menu;
+    border: solid 1px gray;
+
+}
+.right-menu img{
+    margin: 10px;
+}
+.list li {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+h3,h4{
+    font-weight: 100;
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px;
+
+}
+.main-menu{
+    grid-area: main-menu;
+    border: solid 1px gray;
+    text-align: center;
+    font-size: 50px;
+
+}
+.left-menu1{
+    grid-area: left-menu1;
+    border: solid 1px gray;
+    text-align: center;
+    font-size: 50px;
+
+
+}
+.left-menu2{
+    grid-area: left-menu2;
+    border: solid 1px gray;
+    text-align: center;
+}
+
+@media  screen and (max-width:900px){
+    .left-menu2{
+        display: none;
+    }
+    .container{
+        display: grid;
+        grid-template: 'header      header     header    '    70px
+                       'right-menu  main-menu  left-menu1'    1fr/
+                        150px         2fr         1fr    ;
+        width: 100vw;
+        height: 100vh;
+        margin: 5px;
+
+    
+}
+@media  screen and (max-width:500px){
+    .left-menu1{
+        display: none;
+    }
+
+    .container{
+        display: grid;
+        grid-template: 'header      header     '    70px
+                       'right-menu  main-menu  '    1fr/
+                        150px         2fr      ;
+        width: 100vw;
+        height: 100vh;
+        margin: 5px;
+
+    
+}
